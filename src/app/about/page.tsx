@@ -7,9 +7,9 @@ export default function About() {
   return (
     <div style={styles.page}>
       <nav style={styles.nav}>
-        <Link href="/" >Portfolio</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="./" >Portfolio</Link>
+        <Link href="./about">About</Link>
+        <Link href="./contact">Contact</Link>
       </nav>
 
       <div style={styles.container}>
