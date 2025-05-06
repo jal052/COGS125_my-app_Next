@@ -1,103 +1,179 @@
-import Image from "next/image";
+"use client";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div style={styles.page}>
+      <nav style={styles.nav}>
+        <Link href="/" style={styles.link}>Portfolio</Link>
+        <Link href="/about" style={styles.link}>About</Link>
+        <Link href="/contact" style={styles.link}>Contact</Link>
+      </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div style={styles.container}>
+        <h1 style={styles.heading}>Welcome to Jasmine Lam's Portfolio</h1>
+      </div>
+
+      <div style={styles.mainprojects}>
+        <h2 style={styles.projectsHeading}>Projects</h2>
+
+        {/* Language Study App Card */}
+        <div style={styles.card}>
+          <img src="homescreen.png" alt="Language Study App" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Language Study App</h3>
+          <p style={styles.cardDescription}>An app to study languages with flashcards and virtual calls.</p>
+          <Link href="">
+            <button style={styles.button}>View Case Study</button>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        {/* Sleepy Hollow Project Card */}
+        <div style={styles.card}>
+          <img src="sleepyhollow.png" alt="Sleepy Hollow" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Sleepy Hollow</h3>
+          <p style={styles.cardDescription}>A website for children to keep track of their sleep.</p>
+          <Link href="">
+            <button style={styles.button}>View Case Study</button>
+          </Link>
+        </div>
+
+        {/* Another Project Card */}
+        <div style={styles.card}>
+          <img src="mentalhealthapp.png" alt="Another Project" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Mental Health App</h3>
+          <p style={styles.cardDescription}>An app that focuses on mental health.</p>
+          <Link href="">
+            <button style={styles.button}>View Case Study</button>
+          </Link>
+        </div>
+
+      </div>
+
+            {/* Footer Section */}
+            <footer style={styles.footer}>
+        <div style={styles.footerLeft}>
+          <p style={styles.footerText}>Jasmine Lam</p>
+          <p style={styles.footerText}>Email: jasmine@example.com</p>
+        </div>
+        <div style={styles.footerRight}>
+          <p style={styles.footerText}>© 2025 Jasmine Lam | All rights reserved</p>
+        </div>
       </footer>
     </div>
   );
 }
+
+const styles = {
+  page: {
+    backgroundColor: "#fff0f6", // Light pink background
+    fontFamily: "Arial, sans-serif",
+    minHeight: "100vh",
+    padding: "20px",
+    color: "#333",
+  },
+  nav: {
+    display: "flex",
+    justifyContent: "flex-end",
+    gap: "20px",
+    padding: "20px",
+    backgroundColor: "#f7c8d6", // Light pink background for the navbar
+    zIndex: 1000,
+  },
+  link: {
+    textDecoration: "none",
+    fontWeight: "bold",
+    fontSize: "18px",
+    color: "#fff",
+  },
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    marginBottom: "40px",
+    marginTop: "60px",
+  },
+  heading: {
+    fontSize: "2.5rem",
+    fontWeight: "bold",
+    color: "#ff4d91", // Pink color for the heading
+  },
+  mainprojects: {
+    marginTop: "40px",
+    textAlign: "center",
+  },
+  projectsHeading: {
+    fontSize: "2rem",
+    fontWeight: "bold",
+    color: "#ff4d91", // Pink color for projects heading
+    marginBottom: "20px",
+  },
+  card: {
+    backgroundColor: "#fff", // White background for the card
+    padding: "20px",
+    marginBottom: "20px",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+    borderRadius: "12px", // Rounded corners for the card
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  },
+  cardImage: {
+    width: "100%",
+    borderRadius: "8px",
+  },
+  cardTitle: {
+    fontSize: "1.5rem",
+    color: "#ff4d91", // Pink color for the project title
+    fontWeight: "bold",
+    marginTop: "15px",
+  },
+  cardDescription: {
+    fontSize: "1rem",
+    color: "#555",
+    marginBottom: "10px",
+  },
+  button: {
+    marginTop: "10px",
+    padding: "10px 20px",
+    backgroundColor: "#ff4d91", // Pink button
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    fontWeight: "bold",
+    transition: "background-color 0.3s",
+  },
+  imageContainer: {
+    marginTop: "20px",
+  },
+  additionalImage: {
+    width: "100%",
+    maxWidth: "500px",
+    borderRadius: "10px",
+    display: "block",
+    margin: "0 auto",
+  },
+   // Footer Styles
+   footer: {
+    display: "flex",
+    justifyContent: "space-between",  // Ensures items are on opposite sides
+    alignItems: "center",
+    backgroundColor: "#ff4d91", // Pink background for the footer
+    padding: "20px",
+    marginTop: "auto",          // Ensures the footer always sticks to the bottom
+    width: "100%",
+  },
+  footerLeft: {
+    display: "flex",
+    flexDirection: "column",   // Aligns name and email vertically
+    alignItems: "flex-start",  // Aligns items to the left
+  },
+  footerRight: {
+    display: "flex",
+    alignItems: "center",      // Center aligns the text
+  },
+  footerText: {
+    color: "#fff",
+    fontSize: "1rem",
+    fontWeight: "bold",
+  },
+};
