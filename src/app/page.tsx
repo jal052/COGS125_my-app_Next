@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       </nav>
 
       <div style={styles.container}>
-        <h1 style={styles.heading}>Welcome to Jasmine Lam's Portfolio</h1>
+        <h1 style={styles.heading}>Welcome to Jasmine Lam Portfolio</h1>
       </div>
 
       <div style={styles.mainprojects}>
@@ -57,7 +58,7 @@ export default function Home() {
             <footer style={styles.footer}>
         <div style={styles.footerLeft}>
           <p style={styles.footerText}>Jasmine Lam</p>
-          <p style={styles.footerText}>Email: jasmine@example.com</p>
+          <p style={styles.footerText}>Email: jasminelam213@gmail.com</p>
         </div>
         <div style={styles.footerRight}>
           <p style={styles.footerText}>© 2025 Jasmine Lam | All rights reserved</p>
@@ -67,7 +68,7 @@ export default function Home() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   page: {
     backgroundColor: "#fff0f6", // Light pink background
     fontFamily: "Arial, sans-serif",

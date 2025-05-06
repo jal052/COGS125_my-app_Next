@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 export default function About() {
   return (
@@ -19,23 +20,23 @@ export default function About() {
           style={styles.image}
         />
         <p style={styles.text}>
-          Hi! I'm <strong>Jasmine Lam</strong> — a creative developer passionate about building
+          Hi! I am <strong>Jasmine Lam</strong> — a creative developer passionate about building
           beautiful, interactive experiences on the web. ✨
         </p>
         <p style={styles.text}>
           I love blending art and code to tell stories, solve problems, and bring ideas to life.
-          Whether it's coding, designing, or just doodling cute things, I'm always creating!
+          Whether it is coding, designing, or just doodling cute things, I am always creating!
         </p>
         <p style={styles.text}>
-          When I'm not coding, you’ll find me sipping matcha 🍵, collecting cute stationery ✏️, or
-          listening to lo-fi beats 🎧.
+          When I am not coding, you will find me sipping matcha 🍵, collecting cute stationery ✏️, or
+          listening to fun beats 🎧.
         </p>
       </div>
     </div>
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   page: {
     backgroundColor: "#fffafc",
     minHeight: "100vh",

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+import type { CSSProperties } from "react";
 
 export default function Contact() {
   return (
@@ -14,7 +14,7 @@ export default function Contact() {
       <div style={styles.container}>
         <h1 style={styles.heading}>💌 Contact Me</h1>
         <p style={styles.subheading}>
-          I'd love to hear from you! Let's connect and make something amazing.
+          I would love to hear from you! Let us connect and make something amazing.
         </p>
 
         <form style={styles.form}>
@@ -34,7 +34,7 @@ export default function Contact() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   page: {
     backgroundColor: "#fffafc",
     minHeight: "100vh",
