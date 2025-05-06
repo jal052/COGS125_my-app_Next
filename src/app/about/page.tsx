@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
 
       <div style={styles.container}>
         <h1 style={styles.heading}>🌸 About Me</h1>
-        <img
+        <Image
           src="/self-portrait.gif"
           alt="Self Portrait"
           style={styles.image}

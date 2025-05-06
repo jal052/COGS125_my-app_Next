@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
 
         {/* Language Study App Card */}
         <div style={styles.card}>
-          <img src="homescreen.png" alt="Language Study App" style={styles.cardImage} />
+          <Image src="homescreen.png" alt="Language Study App" style={styles.cardImage} width={500}  // Set the width to your desired value
+          height={300} />
           <h3 style={styles.cardTitle}>Language Study App</h3>
           <p style={styles.cardDescription}>An app to study languages with flashcards and virtual calls.</p>
           <Link href="">
@@ -29,7 +31,8 @@ export default function Home() {
 
         {/* Sleepy Hollow Project Card */}
         <div style={styles.card}>
-          <img src="sleepyhollow.png" alt="Sleepy Hollow" style={styles.cardImage} />
+          <Image src="sleepyhollow.png" alt="Sleepy Hollow" style={styles.cardImage} width={500}  // Set the width to your desired value
+          height={300}/>
           <h3 style={styles.cardTitle}>Sleepy Hollow</h3>
           <p style={styles.cardDescription}>A website for children to keep track of their sleep.</p>
           <Link href="">
@@ -39,7 +42,8 @@ export default function Home() {
 
         {/* Another Project Card */}
         <div style={styles.card}>
-          <img src="mentalhealthapp.png" alt="Another Project" style={styles.cardImage} />
+          <Image src="mentalhealthapp.png" alt="Another Project" style={styles.cardImage} width={500}  // Set the width to your desired value
+          height={300} />
           <h3 style={styles.cardTitle}>Mental Health App</h3>
           <p style={styles.cardDescription}>An app that focuses on mental health.</p>
           <Link href="">
