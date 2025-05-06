@@ -18,6 +18,8 @@ export default function About() {
           src="/self-portrait.gif"
           alt="Self Portrait"
           style={styles.image}
+          width={200}
+          height={200}
         />
         <p style={styles.text}>
           Hi! I am <strong>Jasmine Lam</strong> — a creative developer passionate about building
