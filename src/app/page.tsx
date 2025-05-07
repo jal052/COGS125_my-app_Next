@@ -70,25 +70,27 @@ export default function Home() {
 
 const styles: Record<string, CSSProperties> = {
   page: {
-    backgroundColor: "#fff0f6", // Light pink background
-    fontFamily: "Arial, sans-serif",
+    backgroundColor: "#fff0f6",
+    fontFamily: "'Comic Sans MS', 'Comic Neue', cursive",
     minHeight: "100vh",
-    padding: "20px",
     color: "#333",
   },
   nav: {
+    position: "sticky",
+    top: 0,
+    right: 0,
     display: "flex",
     justifyContent: "flex-end",
     gap: "20px",
     padding: "20px",
-    backgroundColor: "#f7c8d6", // Light pink background for the navbar
+    backgroundColor: "#ffe4ec",
     zIndex: 1000,
   },
   link: {
+    color: "#ff69b4",
     textDecoration: "none",
     fontWeight: "bold",
     fontSize: "18px",
-    color: "#fff",
   },
   container: {
     display: "flex",
